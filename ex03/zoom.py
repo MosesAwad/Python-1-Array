@@ -15,11 +15,13 @@ def zoom_slicer(image: Image, x0: int, y0: int, x1: int, y1: int) -> np.array:
 def zoom():
     try:
         image = ft_load("../animal.jpeg")
+        print(image)
 
         zoomed_image = zoom_slicer(image, 450, 100, 850, 500)
         grey_zoomed_image = convert_to_grey(zoomed_image)
 
-        print(np.array(grey_zoomed_image))
+        print("New shape after slicing: ", grey_zoomed_image.shape)
+        print(grey_zoomed_image)
 
         plt.imshow(grey_zoomed_image, cmap="grey")
         plt.axis("on")

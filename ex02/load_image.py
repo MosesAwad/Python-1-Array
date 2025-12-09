@@ -16,10 +16,7 @@ def ft_load(path: str) -> np.array:
         data_array = np.array(im)
         print("The shape of the image is: ", data_array.shape)
 
-        row = data_array[0].copy()  # first row
-        row[-3:] = data_array[-1, -3:, :]   # last 3 pixels from last row
-
-        return row[None, :, :]
+        return data_array
     except AssertionError as e:
         print("Assertion error: ", e)
     except Exception as e:
