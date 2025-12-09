@@ -4,11 +4,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def convert_to_grey(image: Image) -> np.array:
+def convert_to_grey(image: np.array) -> np.array:
     return image[:, :, 0:1]
 
 
-def zoom_slicer(image: Image, x0: int, y0: int, x1: int, y1: int) -> np.array:
+def zoom_slicer(image: np.array, x0: int, y0: int, x1: int, y1: int) -> np.array:
     return image[y0:y1, x0:x1]
 
 
