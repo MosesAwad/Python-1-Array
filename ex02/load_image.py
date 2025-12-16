@@ -34,8 +34,9 @@ def ft_load(path: str):
 
         data_list = list(im.getdata())
         data_array = np.array(data_list)
-        data_array = data_array
-                        .reshape((im.size[1], im.size[0], 3)) #(h,w,channels)
+        data_array = data_array.reshape(
+            (im.size[1], im.size[0], 3)
+        ) # num of cols = 3 for (h,w,channels)
 
         print("The shape of the image is: ", data_array.shape)
 
