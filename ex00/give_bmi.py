@@ -3,6 +3,21 @@ import numpy as np
 
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
+    """
+        Calculates the BMI (Body Mass Index) for a list of heights and weights.
+
+        Args:
+            height (list[int | float]): A list of heights in meters.
+            weight (list[int | float]): A list of weights in kilograms.
+
+        Returns:
+            list[int | float]: A list of BMI values corresponding to the input heights and weights.
+
+        Raises:
+            AssertionError: If the input lists are not of equal length, contain invalid types,
+            or have non-positive values.
+            Exception: If an error occurs during BMI calculation.
+    """
     try:
         assert len(height) == len(weight), \
             "height and weight lists not of equal length"
@@ -29,6 +44,21 @@ def give_bmi(height: list[int | float],
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
+    """
+        Compares each BMI value in the list to a specified limit and returns a list of booleans.
+
+        Args:
+            bmi (list[int | float]): A list of BMI values.
+            limit (int): The BMI limit to compare against.
+
+        Returns:
+            list[bool]: A list of booleans indicating whether each BMI exceeds the limit.
+
+        Raises:
+            AssertionError: If the input BMI list or limit is invalid, or if the BMI list contains
+            non-positive values.
+            Exception: If an error occurs during the comparison.
+    """
     try:
         assert isinstance(bmi, list), "bmi must be of type list"
         assert isinstance(limit, int), "limit must be an integer value"

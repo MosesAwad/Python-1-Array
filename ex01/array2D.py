@@ -2,6 +2,23 @@ import numpy as np
 
 
 def slice_me(family: list, start: int, end: int) -> list:
+    """
+        Slices a 2D list (array) along its rows based on the specified start
+        and end indices.
+
+        Args:
+            family (list): A 2D list representing the input array.
+            start (int): The starting row index for slicing.
+            end (int): The ending row index for slicing.
+
+        Returns:
+            list: The sliced portion of the 2D list.
+
+        Raises:
+            AssertionError: If the input is not a valid 2D list or if the
+            indices are not integers.
+            Exception: If an error occurs during slicing.
+    """
     try:
         assert isinstance(family, list), \
             "must pass in a 2D list as an argument"
