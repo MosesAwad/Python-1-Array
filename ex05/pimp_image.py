@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 
 
 def ft_invert(image: np.array) -> np.array:
+    """
+        Inverts the colors of the input image.
+    """
     try:
         inverted_img = 255 - image
 
@@ -20,12 +23,15 @@ def ft_invert(image: np.array) -> np.array:
 
 
 def ft_grey(image: np.array) -> np.array:
+    """
+        Converts the input image to grayscale.
+    """
     try:
         grey_img = image.copy()
         grey_img = (
             image[:, :, 0:1] / (1 / 0.2989) +
             image[:, :, 1:2] / (1 / 0.5870) +
-            image[:, :, 2:]  / (1 / 0.1140)
+            image[:, :, 2:] / (1 / 0.1140)
         )
 
         plt.imshow(grey_img, cmap="grey")
@@ -41,6 +47,9 @@ def ft_grey(image: np.array) -> np.array:
 
 
 def ft_green(image: np.array) -> np.array:
+    """
+        Extracts the green channel of the input image.
+    """
     try:
         green_img = image.copy()
         green_img[:, :, 0] = 0
@@ -59,6 +68,9 @@ def ft_green(image: np.array) -> np.array:
 
 
 def ft_red(image: np.array) -> np.array:
+    """
+        Extracts the red channel of the input image.
+    """
     try:
         red_img = image.copy()
         red_img[:, :, 1] = 0
@@ -77,6 +89,9 @@ def ft_red(image: np.array) -> np.array:
 
 
 def ft_blue(image: np.array) -> np.array:
+    """
+        Extracts the blue channel of the input image.
+    """
     try:
         blue_img = image.copy()
         blue_img[:, :, 0] = 0
