@@ -5,10 +5,16 @@ import matplotlib.pyplot as plt
 
 
 def convert_to_grey(image: np.array) -> np.array:
-    return image[:, :, 0:1]
+    # return image[:, :, 0:1]
+    grey_image = 0.2989 * image[:, :, 0:1] + 0.5870 * image[:, :, 1:2] + 0.1140 * image[:, :, 2:]
+    return grey_image
 
 
 def zoom_slicer(image: np.array, x0: int, y0: int, x1: int, y1: int) -> np.array:
+    """
+        This function doesn't really "zoom", it slices the image into the two 
+        extreme corners: top left [x0,y0]) and bot right [x1, y1]
+    """
     return image[y0:y1, x0:x1]
 
 
