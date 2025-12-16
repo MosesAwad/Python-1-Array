@@ -13,6 +13,8 @@ def ft_invert(image: np.array) -> np.array:
 
     except Exception as e:
         exit(f'Exception: {e}')
+    except KeyboardInterrupt:
+        pass
 
     return inverted_img
 
@@ -32,6 +34,8 @@ def ft_grey(image: np.array) -> np.array:
 
     except Exception as e:
         exit(f'Exception: {e}')
+    except KeyboardInterrupt:
+        pass
 
     return grey_img
 
@@ -48,6 +52,8 @@ def ft_green(image: np.array) -> np.array:
 
     except Exception as e:
         exit(f'Exception: {e}')
+    except KeyboardInterrupt:
+        pass
 
     return green_img
 
@@ -64,6 +70,8 @@ def ft_red(image: np.array) -> np.array:
 
     except Exception as e:
         exit(f'Exception: {e}')
+    except KeyboardInterrupt:
+        pass
 
     return red_img
 
@@ -80,10 +88,19 @@ def ft_blue(image: np.array) -> np.array:
 
     except Exception as e:
         exit(f'Exception: {e}')
+    except KeyboardInterrupt:
+        pass
 
     return blue_img
 
 
 if __name__ == "__main__":
-    image = ft_load("../landscape.jpg")
-    ft_invert(image)
+    try:
+        image = ft_load("../landscape.jpg")
+        ft_blue(image)
+    except AssertionError as e:
+        print("AssertionError: ", e)
+    except Exception as e:
+        print("Exception: ", e)
+    except KeyboardInterrupt:
+        pass
