@@ -6,6 +6,16 @@ import matplotlib.pyplot as plt
 def ft_invert(image: np.array) -> np.array:
     """
         Inverts the colors of the input image.
+
+        Args:
+            image (np.array): The input image as a NumPy array.
+
+        Returns:
+            np.array: The color-inverted image.
+
+        Raises:
+            Exception: If an error occurs during processing.
+            KeyboardInterrupt: If the process is interrupted by the user.
     """
     try:
         inverted_img = 255 - image
@@ -25,6 +35,16 @@ def ft_invert(image: np.array) -> np.array:
 def ft_grey(image: np.array) -> np.array:
     """
         Converts the input image to grayscale.
+
+        Args:
+            image (np.array): The input image as a NumPy array.
+
+        Returns:
+            np.array: The grayscale image.
+
+        Raises:
+            Exception: If an error occurs during processing.
+            KeyboardInterrupt: If the process is interrupted by the user.
     """
     try:
         grey_img = image.copy()
@@ -49,6 +69,16 @@ def ft_grey(image: np.array) -> np.array:
 def ft_green(image: np.array) -> np.array:
     """
         Extracts the green channel of the input image.
+
+        Args:
+            image (np.array): The input image as a NumPy array.
+
+        Returns:
+            np.array: The image with only the green channel.
+
+        Raises:
+            Exception: If an error occurs during processing.
+            KeyboardInterrupt: If the process is interrupted by the user.
     """
     try:
         green_img = image.copy()
@@ -70,6 +100,16 @@ def ft_green(image: np.array) -> np.array:
 def ft_red(image: np.array) -> np.array:
     """
         Extracts the red channel of the input image.
+
+        Args:
+            image (np.array): The input image as a NumPy array.
+
+        Returns:
+            np.array: The image with only the red channel.
+
+        Raises:
+            Exception: If an error occurs during processing.
+            KeyboardInterrupt: If the process is interrupted by the user.
     """
     try:
         red_img = image.copy()
@@ -91,6 +131,16 @@ def ft_red(image: np.array) -> np.array:
 def ft_blue(image: np.array) -> np.array:
     """
         Extracts the blue channel of the input image.
+
+        Args:
+            image (np.array): The input image as a NumPy array.
+
+        Returns:
+            np.array: The image with only the blue channel.
+
+        Raises:
+            Exception: If an error occurs during processing.
+            KeyboardInterrupt: If the process is interrupted by the user.
     """
     try:
         blue_img = image.copy()

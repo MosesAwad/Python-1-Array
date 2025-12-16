@@ -3,6 +3,22 @@ import numpy as np
 
 
 def ft_load(path: str) -> np.array:
+    """
+        Loads an image from the specified path and converts it into a NumPy
+        array.
+
+        Args:
+            path (str): The file path to the image.
+
+        Returns:
+            np.array: The image as a NumPy array.
+
+        Raises:
+            AssertionError: If the path is not a valid string or the image
+            format is not supported.
+
+            Exception: If an error occurs during image loading.
+    """
     try:
         assert isinstance(path, str) and len(path) > 0, \
             "The path must be a string."
