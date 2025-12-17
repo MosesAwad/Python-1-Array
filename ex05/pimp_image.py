@@ -160,12 +160,5 @@ def ft_blue(image: np.array) -> np.array:
 
 
 if __name__ == "__main__":
-    try:
-        image = ft_load("../landscape.jpg")
-        ft_blue(image)
-    except AssertionError as e:
-        print("AssertionError: ", e)
-    except Exception as e:
-        print("Exception: ", e)
-    except KeyboardInterrupt:
-        pass
+    image = ft_load("../landscape.jpg")
+    ft_blue(image)

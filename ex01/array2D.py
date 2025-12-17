@@ -51,10 +51,5 @@ if __name__ == "__main__":
         [1.88, 75.2]
     ]
 
-    # family = [[],
-    #             [],
-    #             [],
-    #             []]
-
     print(slice_me(family, 0, 2))
     print(slice_me(family, 1, -2))
