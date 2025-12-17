@@ -69,20 +69,15 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
             assert isinstance(b, (float, int)), \
                 "bmi must only contain either float or int values"
             assert b > 0, "cannot have negative or zero bmi values"
-        
+
         return (np.array(bmi) > limit).tolist()
     except AssertionError as e:
         print("AssertionError: ", e)
     except Exception as e:
         print("Exception: ", e)
-        return []
 
 
 if __name__ == "__main__":
-    # height = [189, 178, 163, 190, 172]
-    # weight = [92, 81, 72, 98, 93]
-
-    # print(give_bmi(height, weight))
     height = [2.71, 1.15]
     weight = [165.3, 38.4]
     bmi = give_bmi(height, weight)
