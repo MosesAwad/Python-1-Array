@@ -36,7 +36,7 @@ def slice_me(family: list, start: int, end: int) -> list:
         sliced_array = array[start:end]
         print("My new shape is :", sliced_array.shape)
 
-        return sliced_array
+        return sliced_array.tolist()
     except AssertionError as e:
         print("AssertionError: ", e)
     except Exception as e:

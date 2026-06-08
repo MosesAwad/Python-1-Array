@@ -91,3 +91,14 @@ def test_start_end_invalid_values():
 
     result = slice_me(valid_2D, 'c', 'a')
     assert result is None
+
+
+def test_return_type_list():
+    valid_2D = [
+        [1.80, 78.4],
+        [2.15, 102.7],
+        [2.10, 98.5],
+        [1.88, 75.2]
+    ]
+    result = slice_me(valid_2D, 0, 2)
+    assert isinstance(result, list)
