@@ -20,7 +20,8 @@ def ft_load(path: str) -> np.array:
             Exception: If an error occurs during image loading.
     """
     try:
-        assert isinstance(path, str) and len(path) > 0, \
+        assert len(path) > 0, "The path cannot be empty."
+        assert isinstance(path, str), \
             "The path must be a string."
 
         im = Image.open(path)
