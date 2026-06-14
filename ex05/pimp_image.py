@@ -24,12 +24,11 @@ def ft_invert(image: np.array) -> np.array:
         plt.title('Inverted Image')
         plt.show()
 
+        return inverted_img
     except Exception as e:
         exit(f'Exception: {e}')
     except KeyboardInterrupt:
         pass
-
-    return inverted_img
 
 
 def ft_grey(image: np.array) -> np.array:
@@ -58,12 +57,11 @@ def ft_grey(image: np.array) -> np.array:
         plt.title('Grey Image')
         plt.show()
 
+        return grey_img
     except Exception as e:
         exit(f'Exception: {e}')
     except KeyboardInterrupt:
         pass
-
-    return grey_img
 
 
 def ft_green(image: np.array) -> np.array:
@@ -89,12 +87,11 @@ def ft_green(image: np.array) -> np.array:
         plt.title('Green Image')
         plt.show()
 
+        return green_img
     except Exception as e:
         exit(f'Exception: {e}')
     except KeyboardInterrupt:
         pass
-
-    return green_img
 
 
 def ft_red(image: np.array) -> np.array:
@@ -120,12 +117,11 @@ def ft_red(image: np.array) -> np.array:
         plt.title('Red Image')
         plt.show()
 
+        return red_img
     except Exception as e:
         exit(f'Exception: {e}')
     except KeyboardInterrupt:
         pass
-
-    return red_img
 
 
 def ft_blue(image: np.array) -> np.array:
@@ -151,12 +147,11 @@ def ft_blue(image: np.array) -> np.array:
         plt.title('Blue Image')
         plt.show()
 
+        return blue_img
     except Exception as e:
         exit(f'Exception: {e}')
     except KeyboardInterrupt:
         pass
-
-    return blue_img
 
 
 if __name__ == "__main__":
